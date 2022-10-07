@@ -1,0 +1,43 @@
+@charset "utf-8";
+
+/**
+*
+* @author 허 윤 정
+*
+**/
+
+@font-face{
+  font-family:'notoLight';
+  font-style:normal;
+  font-weight:100;
+  src:url('../fonts/NotoSansCJKkr-Light.otf');
+  src:local('※'),
+    url('../fonts//NotoSansCJKkr-Light.otf') format('opentype');
+}
+
+@font-face{
+  font-family:'noto';
+  font-style:normal;
+  font-weight:400;
+  src:url('../fonts/NotoSansCJKkr-Regular.otf');
+  src:local('※'),
+    url('../fonts/NotoSansCJKkr-Regular.otf') format('opentype');
+}
+
+@font-face{
+  font-family:'notoMedium';
+  font-style:normal;
+  font-weight:400;
+  src:url('../fonts/NotoSansCJKkr-Medium.otf');
+  src:local('※'),
+    url('../fonts/NotoSansCJKkr-Medium.otf') format('opentype');
+}
+
+@font-face{
+  font-family:'notoBold';
+  font-style:normal;
+  font-weight:500;
+  src:url('../fonts/NotoSansCJKkr-Bold.otf');
+  src:local('※'),
+    url('../fonts/NotoSansCJKkr-Bold.otf') format('opentype');
+}

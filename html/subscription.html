@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>VOMA</title>
+    
+        <!-- Jquery -->
+        <script src="../js/jquery-3.4.1.min.js"></script>
+        <script src="../js/common.js"></script>
+
+        <!-- CSS -->
+        <link href="../css/main.css" rel="stylesheet">
+        <link href="../css/button.css" rel="stylesheet">
+        <link href="../css/font.css" rel="stylesheet">
+        <link href="../css/common.css" rel="stylesheet">
+        <link href="../css/reset.css" rel="stylesheet">
+	</head>
+
+	<body>
+        <!-- search -->
+        <div class="wrapper">
+
+            <!-- header -->
+            <header class="header">
+                <div class="gnb_box">
+
+                    <!-- logo -->
+                    <div class="header_1">
+                        <button type="button" class="btn_logo">로고</button>
+                    </div>
+
+                    <!-- tab -->
+                    <div class="header_2">
+                        <ul>
+                            <li onclick="location.href='./information.html'">이용안내</li>
+                            <li class="on" onclick="location.href='./subscription.html'">구독권</li>
+                        </ul>
+                    </div>
+
+                    <!-- gnb -->
+                    <div class="header_3">
+                        <!-- <div class="">
+                            <button type="button" class="btn_gnb btn_gnb1">
+                                <span></span>
+                            </button>
+                            <button type="button" class="btn_gnb btn_gnb2"></button>
+                            <button type="button" class="btn_gnb btn_gnb3"></button>
+                            <button type="button" class="btn_gnb btn_gnb4"></button>
+                        </div> -->
+                    </div>
+
+                    <!-- profile -->
+                    <div class="header_4">
+                        <ul>
+                            <li>
+                                <a href="javascript:;">
+                                    <div class="top_profile_img flexLineCenter">
+                                        <img src="../images/etc/profile.png" alt="프로필"/>
+                                        <div class="top_profile flexColumnSpace">
+                                            <p class="ellipsis">Kim Artvoma</p>
+                                            <p class="ellipsis mt5">#관람객 #컬렉터 #셀러</p>
+                                        </div>
+                                        <button type="button" class="btn_down btn_down_bk">열기</button>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+
+                        <!-- profile_click -->
+                        <div class="tooltip_wt tooltip_wt2">
+                            <div class="tooltip_box_wt">
+                                <ul class="tooltip_top">
+                                    <li onclick="location.href='./my_profile.html'">
+                                        <button type="button" class="btn_h_profile">My Profile</button>
+                                    </li>
+                                    <li onclick="location.href='./my_art.html'">
+                                        <button type="button" class="btn_h_art">My Art</button>
+                                    </li>
+                                    <li onclick="location.href='./my_gallery.html'">
+                                        <button type="button" class="btn_h_gallery">My Gallery</button>
+                                    </li>
+                                </ul>
+                                <ul class="tooltip_bottom">
+                                    <li>
+                                        <button type="button" class="btn_h_logout">로그아웃</button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- profile-nonLogin -->
+                    <div class="header_5">
+                        <button type="button" class="btn_login2" onclick="location.href='./login.html'">로그인</button>
+                    </div>
+
+                </div>
+            </header>
+
+            <!-- cnt_center -->
+            <section class="cnt_center cnt_center_subscribe">
+                <div class="cnt_center_inner flexColumnCenter pb60">
+                    <h1 class="mb24">구독권</h1>
+                    <h2>서비스 오픈 프로모션 중입니다.</h2>
+                    <h2 class="mb10">프로모션 기간중 모든 서비스를 무료로 체험하실 수 있습니다.</h2>
+                    <h3>구독권 정보는 추후 개인 이메일을 통해 전달드리겠습니다.</h3>
+                </div>
+                <div class="cnt_center_mid cnt_center_mid2">
+                    <div class="cnt_center_inner pt60 pb60">
+                        <div class="subscribe_wrap flex">
+                            <div class="subscribe_box">
+                                <div>
+                                    <strong class="blue">Free</strong>
+                                    <span class="cost cost_exp">무료</span>
+                                    <span>모든 서비스를 제약없이 이용</span>
+                                </div>
+                                <div class="subscribe_list flexColumnSpace">
+                                    <ul>
+                                        <li>1개의 가상갤러리 지원</li>
+                                        <li>5개의 작품 업로드</li>
+                                        <li>무료 템플릿 제공</li>
+                                    </ul>
+                                    <button type="button" class="btn_bg_grey_40">Current plan</button>
+                                </div>
+                            </div>
+                            <div class="subscribe_box disabled">
+                                <div>
+                                    <strong>Basic</strong>
+                                    <span class="cost">&#8361; / 월</span>
+                                    <span>예술에 입문하는 일반인</span>
+                                </div>
+                                <div class="subscribe_list flexColumnSpace">
+                                    <ul>
+                                        <li>3개의 가상갤러리 지원</li>
+                                        <li>20개의 작품 업로드</li>
+                                        <li>Free+Basic 템플릿 제공</li>
+                                    </ul>
+                                    <button type="button" class="btn_grey_40">Update</button>
+                                </div>
+                            </div>
+                            <div class="subscribe_box disabled">
+                                <div>
+                                    <strong>Advanced</strong>
+                                    <span class="cost">&#8361; / 월</span>
+                                    <span>예술에 안목이 있는<br/> 예술가와 큐레이터</span>
+                                </div>
+                                <div class="subscribe_list flexColumnSpace">
+                                    <ul>
+                                        <li>10개의 가상갤러리 지원</li>
+                                        <li>50개의 작품 업로드</li>
+                                        <li>Free+Basic+Advanced 템플릿 제공</li>
+                                        <li>갤러리 BGM 기능</li>
+                                    </ul>
+                                    <button type="button" class="btn_grey_40">Update</button>
+                                </div>
+                            </div>
+                            <div class="subscribe_box disabled">
+                                <div>
+                                    <strong>Premium</strong>
+                                    <span class="cost">&#8361; / 월</span>
+                                    <span>전문 예술가와 큐레이터</span>
+                                </div>
+                                <div class="subscribe_list flexColumnSpace">
+                                    <ul>
+                                        <li>무제한 가상갤러리 지원</li>
+                                        <li>100개의 작품 업로드</li>
+                                        <li>모든 템플릿 제공</li>
+                                        <li>갤러리 BGM 기능</li>
+                                    </ul>
+                                    <button type="button" class="btn_grey_40">Update</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- </div> -->
+            </section>
+
+            <footer class="profile_footer footer">
+                <div class="flexSpaceCenter">
+                    <div class="footer_left flexLineCenter">
+                        <img src="../images/etc/logo.svg" alt="보마로고">
+                        <ul>
+                            <li><strong>회사소개</strong></li>
+                            <li class="blue" onclick="location.href='./terms.html'"><strong>이용정책</strong></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <span><strong>VOMA</strong> COPYRIGHT VOMA. ALL RIGHTS RESERVED</span>
+                    </div>
+                    <div class="footer_right">
+                        <ul>
+                            <li><strong>T.</strong> 1688-0000</li>
+                            <li><strong>E.</strong> Service@Voma.co.kr</li>
+                        </ul>
+                    </div>
+                </div>
+            </footer>
+
+        </div>
+    </body>
+</html>

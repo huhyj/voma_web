@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>VOMA</title>
+    
+        <!-- Jquery -->
+        <script src="../js/jquery-3.4.1.min.js"></script>
+        <script src="../js/common.js"></script>
+
+        <!-- CSS -->
+        <link href="../css/main.css" rel="stylesheet">
+        <link href="../css/button.css" rel="stylesheet">
+        <link href="../css/font.css" rel="stylesheet">
+        <link href="../css/common.css" rel="stylesheet">
+        <link href="../css/reset.css" rel="stylesheet">
+	</head>
+
+	<body>
+        <!-- search -->
+        <div class="wrapper">
+
+            <!-- header -->
+            <header class="header">
+                <div class="gnb_box">
+
+                    <!-- logo -->
+                    <div class="header_1">
+                        <button type="button" class="btn_logo">로고</button>
+                    </div>
+
+                    <!-- tab -->
+                    <div class="header_2">
+                        <ul>
+                            <li onclick="location.href='./main_01.html'">1. 전시정보 입력</li>
+                            <li onclick="location.href='./main_02.html'">2. 템플릿 설정</li>
+                            <li onclick="location.href='./main_03.html'">3. 갤러리 디자인</li>
+                            <li class="on" onclick="location.href='./main_04.html'">4. 작품 전시</li>
+                            <li onclick="location.href='./main_05.html'">5. 투어 설정</li>
+                        </ul>
+                    </div>
+
+                    <!-- gnb -->
+                    <div class="header_3">
+                        <div class="flexSpaceCenter">
+                            <button type="button" class="btn_gnb btn_gnb1">
+                                <span></span>
+                            </button>
+                            <button type="button" class="btn_gnb btn_gnb2"></button>
+                            <button type="button" class="btn_gnb btn_gnb3"></button>
+                            <button type="button" class="btn_gnb btn_gnb4"></button>
+                        </div>
+
+                        <!-- tooltip_hover -->
+                        <div class="tooltip">
+                            <div class="tooltip_box">
+                                <span>템플릿 선택</span>
+                            </div>
+                        </div>
+
+                        <!-- tooltip_click -->
+                        <div class="tooltip_wt tooltip_wt1">
+                            <ul class="tooltip_box_wt">
+                                <li class="on">템플릿1</li>
+                                <li>템플릿2</li>
+                                <li>템플릿3</li>
+                                <li>템플릿4</li>
+                                <li>템플릿5</li>
+                                <li>템플릿6</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- profile -->
+                    <div class="header_4">
+                        <ul>
+                            <li>
+                                <a href="javascript:;">
+                                    <div class="top_profile_img flexLineCenter">
+                                        <img src="../images/etc/profile.png" alt="프로필"/>
+                                        <div class="top_profile flexColumnSpace">
+                                            <p class="ellipsis">Kim Artvoma</p>
+                                            <p class="ellipsis mt5">#관람객 #컬렉터 #셀러</p>
+                                        </div>
+                                        <button type="button" class="btn_down btn_down_bk">열기</button>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+
+                        <!-- profile_click -->
+                        <div class="tooltip_wt tooltip_wt2">
+                            <div class="tooltip_box_wt">
+                                <ul class="tooltip_top">
+                                    <li onclick="location.href='./my_profile.html'">
+                                        <button type="button" class="btn_h_profile">My Profile</button>
+                                    </li>
+                                    <li onclick="location.href='./my_art.html'">
+                                        <button type="button" class="btn_h_art">My Art</button>
+                                    </li>
+                                    <li onclick="location.href='./my_gallery.html'">
+                                        <button type="button" class="btn_h_gallery">My Gallery</button>
+                                    </li>
+                                </ul>
+                                <ul class="tooltip_bottom">
+                                    <li>
+                                        <button type="button" class="btn_h_logout">로그아웃</button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- profile-nonLogin -->
+                    <div class="header_5">
+                        <button type="button" class="btn_login2" onclick="location.href='./login.html'">로그인</button>
+                    </div>
+
+                </div>
+            </header>
+
+            <!-- content_left -->
+            <section class="cnt_left cnt_left_showing">
+                <div class="view_box">
+                    <label class="switch">
+                        <input type="checkbox" class="view_chk">
+                        <span class="slider"></span>
+                        <span class="slider_txt slider_left">1인칭</span>
+                        <span class="slider_txt slider_right">자유</span>
+                    </label>
+                </div>
+
+                <div class="snb_box">
+                    <div class="flexColumnCenter">
+                        <button type="button" class="btn_snb btn_snb1" onclick="popupManual();"><span>조작법</span></button>
+                        <button type="button" class="btn_snb btn_snb2"><span>삭제</span></button>
+                        <button type="button" class="btn_snb btn_snb3"><span>실행취소</span></button>
+                        <button type="button" class="btn_snb btn_snb4"><span>복원</span></button>
+                        <button type="button" class="btn_snb btn_snb5"><span>단계 초기화</span></button>
+                        <button type="button" class="btn_snb btn_snb6 on"><span>미니맵</span></button>
+                    </div>
+                </div>
+
+                <!-- 임시샘플이미지 -->
+                <div class="main_04_bg" style="position: absolute; top: 30%; left: 45%; cursor: pointer;">
+                    <img src="../images/etc/main_04_sample1.png" alt="샘플이미지" class="art_edit"/>
+                </div>
+            </section>
+
+            <!-- content_right -->
+            <section class="cnt_right">
+                <div class="cnt_right_origin">
+                    <div class="cnt_right_top">
+                        <ul class="tab">
+                            <li class="on" data-tab="tab_01"><a href="javascript:;">작품</a></li>
+                            <li class="" data-tab="tab_02"><a href="javascript:;">소품</a></li>
+                        </ul>
+
+                        <div id="tab_01" class="tab_cnt container">
+                            <ul>
+                                <li class="mb12">
+                                    <a href="javascript:;">
+                                        <div class="temp_yn temp_y">
+                                            <div class="temp_yn_box">
+                                                <div class="flexLineCenter">
+                                                    <button type="button" class="btn_remove2">삭제</button>
+                                                    <div class="temp_y_left">
+                                                        <img src="../images/etc/main_04_sample2.png" alt="샘플이미지"/>
+                                                    </div>
+                                                    <div class="temp_y_right">
+                                                        <p class="ellipsis">샘플1 샘플1 샘플1 샘플1</p>
+                                                        <p class="ellipsis">162.2 x 130.3 cm (w x h)</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="mb12">
+                                    <a href="javascript:;">
+                                        <div class="temp_yn temp_n">
+                                            <div class="temp_yn_box">
+                                                <div class="flexLineCenter">
+                                                    <div class="temp_n_left flexCenterAll">
+                                                        <img src="../images/icon/icon_plus_light.svg" alt="불러오기"/>
+                                                    </div>
+                                                    <div class="temp_n_right"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div id="tab_02" class="tab_cnt tab_cnt2 container">
+                            <ul>
+                                <li>
+                                    <img src="../images/etc/main_04_sample3.png" alt="샘플이미지"/>
+                                </li>
+                                <li>
+                                    <img src="../images/etc/main_04_sample4.png" alt="샘플이미지"/>
+                                </li>
+                                <li>
+                                    <img src="../images/etc/main_04_sample3.png" alt="샘플이미지"/>
+                                </li>
+                                <li>
+                                    <img src="../images/etc/main_04_sample3.png" alt="샘플이미지"/>
+                                </li>
+                                <li>
+                                    <img src="../images/etc/main_04_sample4.png" alt="샘플이미지"/>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="cnt_right_bottom">
+                        <div class="wrap_100 flexLineCenter">
+                            <button type="button" class="bg_grey">이전</button>
+                            <button type="button" class="bg_bk">다음</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cnt_right_pop">
+                    <div class="cnt_right">
+                        <div class="container2">
+                            <div class="cnt_right_tit">
+                                <div class="flexSpaceCenter">
+                                    <span>작품 설정</span>
+                                    <button type="button" class="btn_remove" onclick="$('.cnt_right_pop').hide();">닫기</button>
+                                </div>
+                                <div>
+                                    <div class="ratio_top pad24_0">
+                                        <input type="checkbox" checked>
+                                        <label>비율로 조정</label>
+                                    </div>
+                                    <div class="ratio_mid">
+                                        <label>Width</label>
+                                        <input type="text" placeholder="248.5">
+                                        <label>Height</label>
+                                        <input type="text" placeholder="333.3">                                        
+                                    </div>
+                                    <!-- <div class="ratio_bottom">
+                                        <button type="button" class="btn_edit" onclick="$('.cnt_myart').show();">작품 편집</button>
+                                    </div> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- My Art 팝업 -->
+            <div class="cnt_myart bg_popup_dark">
+                <div class="wrap_100 flexCenterAll">
+                    <div class="myart_box">
+                        <div class="popup_tit flexSpaceCenter">
+                            <p>My Art</p>
+                            <button type="button" class="btn_remove" onclick="popupClose();"></button>
+                        </div>
+                        <div class="container3">
+                            <div class="popup_cnt">
+                                <ul class="tab">
+                                    <li class="on" data-tab="tab_03"><a href="javascript:;">이미지</a></li>
+                                    <li class="" data-tab="tab_04"><a href="javascript:;">텍스트</a></li>
+                                    <li class="disabled" data-tab="tab_05"><a href="javascript:;">비디오</a></li>
+                                    <li class="disabled" data-tab="tab_06"><a href="javascript:;">조각/공예</a></li>
+                                </ul>
+                                <div id="tab_03" class="tab_cnt pt55">
+                                    <div class="tab_cnt_top pt40 mb24">
+                                        <div class="tab_cnt_top_right">
+                                            <input type="text" placeholder="검색">
+                                            <button type="button" class="btn_search">검색</button>
+                                        </div>
+                                    </div>
+                                    <div class="tab_cnt_mid">
+                                        <ul>
+                                            <li>
+                                                <a href="javascript:;">
+                                                    <div class="flexColumn">
+                                                        <div class="area_img">
+                                                            <div class="btns_area">
+                                                                <div class="flexCenterAll">
+                                                                    <button type="button" class="btn_border_wt btn_edit2">수정</button>
+                                                                    <button type="button" class="btn_border_wt btn_remove3">삭제</button>
+                                                                </div>
+                                                            </div>
+                                                            <img src="../images/etc/main_04_sample1.png" alt="샘플이미지"/>
+                                                        </div>
+                                                        <div class="area_txt">
+                                                            <p class="ellipsis area_txt_tit">Sample1</p>
+                                                            <p class="ellipsis">162.2 x 130.3 cm (w x h)</p>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">
+                                                    <div class="flexColumn">
+                                                        <div class="area_img">
+                                                            <div class="btns_area">
+                                                                <div class="flexCenterAll">
+                                                                    <button type="button" class="btn_border_wt btn_edit2">수정</button>
+                                                                    <button type="button" class="btn_border_wt btn_remove3">삭제</button>
+                                                                </div>
+                                                            </div>
+                                                            <img src="../images/etc/main_04_sample2.png" alt="샘플이미지"/>
+                                                        </div>
+                                                        <div class="area_txt">
+                                                            <p class="ellipsis area_txt_tit">Sample2</p>
+                                                            <p class="ellipsis">162.2 x 130.3 cm (w x h)</p>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">
+                                                    <div class="flexColumn">
+                                                        <div class="area_img">
+                                                            <div class="btns_area">
+                                                                <div class="flexCenterAll">
+                                                                    <button type="button" class="btn_border_wt btn_edit2">수정</button>
+                                                                    <button type="button" class="btn_border_wt btn_remove3">삭제</button>
+                                                                </div>
+                                                            </div>
+                                                            <img src="../images/etc/main_04_sample1.png" alt="샘플이미지"/>
+                                                        </div>
+                                                        <div class="area_txt">
+                                                            <p class="ellipsis area_txt_tit">Sample3</p>
+                                                            <p class="ellipsis">162.2 x 130.3 cm (w x h)</p>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">
+                                                    <div class="flexColumn">
+                                                        <div class="area_img">
+                                                            <div class="btns_area">
+                                                                <div class="flexCenterAll">
+                                                                    <button type="button" class="btn_border_wt btn_edit2">수정</button>
+                                                                    <button type="button" class="btn_border_wt btn_remove3">삭제</button>
+                                                                </div>
+                                                            </div>
+                                                            <img src="../images/etc/main_04_sample1.png" alt="샘플이미지"/>
+                                                        </div>
+                                                        <div class="area_txt">
+                                                            <p class="ellipsis area_txt_tit">Sample4</p>
+                                                            <p class="ellipsis">162.2 x 130.3 cm (w x h)</p>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">
+                                                    <div class="flexColumn">
+                                                        <div class="area_img">
+                                                            <div class="btns_area">
+                                                                <div class="flexCenterAll">
+                                                                    <button type="button" class="btn_border_wt btn_edit2">수정</button>
+                                                                    <button type="button" class="btn_border_wt btn_remove3">삭제</button>
+                                                                </div>
+                                                            </div>
+                                                            <img src="../images/etc/main_04_sample2.png" alt="샘플이미지"/>
+                                                        </div>
+                                                        <div class="area_txt">
+                                                            <p class="ellipsis area_txt_tit">Sample5</p>
+                                                            <p class="ellipsis">162.2 x 130.3 cm (w x h)</p>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="tab_cnt_bottom">
+                                        <button type="button" class="btn_upload">업로드</button>
+                                        <button type="button" class="btn_upload_multi">다중 업로드</button>
+                                    </div>
+                                </div>
+                                <div id="tab_04" class="tab_cnt pt55">
+                                    <div class="flex pt40 pb24">
+                                        <div class="tab_cnt_left2">
+                                            <div class="container3">
+                                                <div>
+                                                    <label>타이틀</label>
+                                                    <input type="text" placeholder="타이틀을 입력해 주세요.">
+                                                </div>
+                                                <div>
+                                                    <label>내용</label>
+                                                    <div class="flex mb10">
+                                                        <div class="select_list select_font">
+                                                            <ul class="select_box">
+                                                                <li>폰트</li>
+                                                                <ul class="item_list">
+                                                                    <li>고딕</li>
+                                                                    <li>맑은고딕</li>
+                                                                    <li>굴림</li>
+                                                                </ul>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="select_list select_align">
+                                                            <ul class="select_box">
+                                                                <li>정렬</li>
+                                                                <ul class="item_list">
+                                                                    <li>왼쪽 정렬</li>
+                                                                    <li>오른쪽 정렬</li>
+                                                                    <li>가운데 정렬</li>
+                                                                </ul>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="select_color_box">
+                                                            <div class="select_color"></div>
+                                                        </div>
+                                                    </div>
+                                                    <textarea placeholder="내용을 입력해 주세요."></textarea>
+                                                </div>
+                                                <div class="sample_txt">
+                                                    <div class="pad12">MODERN ART</div>
+                                                </div>
+                                                <div class="ratio_bottom">
+                                                    <button type="button" class="btn_edit3">수정</button>
+                                                    <button type="button" class="btn_add2">추가</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tab_cnt_right2">
+                                            <div class="container3">
+                                                <div class="mb12">
+                                                    <p>타이틀</p>
+                                                    <div>
+                                                        <button type="button" class="btn_border_grey"><span>modern art</span></button>
+                                                        <button type="button" class="btn_border_grey"><span>modern test</span></button>
+                                                    </div>
+                                                </div>
+                                                <div class="mb12">
+                                                    <p>전시 소개</p>
+                                                    <div>
+                                                        <button type="button" class="btn_border_grey"><span>what a nice weekend</span></button>
+                                                        <button type="button" class="btn_border_grey"><span>what a nice weekend what a nice weekend</span></button>
+                                                    </div>
+                                                </div>
+                                                <div class="mb12">
+                                                    <p>아티스트 명</p>
+                                                    <div>
+                                                        <button type="button" class="btn_border_grey"><span>James</span></button>
+                                                        <button type="button" class="btn_border_grey"><span>Emma</span></button>
+                                                        <button type="button" class="btn_border_grey"><span>Alexander</span></button>
+                                                        <button type="button" class="btn_border_grey"><span>Jessica</span></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="tab_05" class="tab_cnt pt55" style="min-height: 550px;"></div>
+                                <div id="tab_06" class="tab_cnt pt55" style="min-height: 550px;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- My Art 팝업 -->
+            <div class="cnt_myart_upload bg_popup_dark">
+                <div class="wrap_100 flexCenterAll">
+                    <div class="myart_box">
+                        <div class="popup_tit flexSpaceCenter">
+                            <p>My Art_Upload</p>
+                            <button type="button" class="btn_remove" onclick="popupClose();"></button>
+                        </div>
+                        <div class="pt24 pl24">
+                            <div class="flex">
+                                <div class="tab_cnt_left">
+                                    <div class="flexColumn">
+                                        <div class="temp_area mb24">
+                                            <div class="temp_before flexCenterAll">
+                                                <div class="temp_txt">
+                                                    <span class="exp">클릭 또는,<br/>파일을 드래그 해주세요.</span>
+                                                </div>
+                                            </div>
+                                            <div class="temp_after">
+                                                <div class="temp_after_img">
+                                                    <img src="../images/etc/main_04_sample2.png" alt="샘플이미지"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <p class="mb5">* 500KB-5MB 파일을 업로드 해주세요.</p>
+                                            <p class="mb5">* 이미지 파일은 5000x5000 pixels을 권장합니다.</p>
+                                            <p>* 확장자 : 1) 이미지 : png/jpg/jpeg,</p>
+                                            <p>2) 동영상 : mp4/webm/ogg</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab_cnt_right">
+                                    <div class="upload_item">
+                                        <label>작품명</label>
+                                        <input type="text" placeholder="작품명을 입력해 주세요.">
+                                    </div>
+                                    <div class="upload_item">
+                                        <label>작가명</label>
+                                        <input type="text" placeholder="작가명을 입력해 주세요.">
+                                    </div>
+                                    <div class="upload_item">
+                                        <label>작품 설명</label>
+                                        <textarea placeholder="작품 설명을 입력해 주세요."></textarea>
+                                    </div>
+                                    <div class="upload_item">
+                                        <label>제작 년도</label>
+                                        <div class="flex">
+                                            <input type="text" placeholder="년도" class="input_120">
+                                            <div class="select_list select_month">
+                                                <ul class="select_box">
+                                                    <li>월</li>
+                                                    <ul class="item_list">
+                                                        <li>1</li>
+                                                        <li>2</li>
+                                                        <li>3</li>
+                                                        <li>4</li>
+                                                        <li>5</li>
+                                                        <li>6</li>
+                                                        <li>7</li>
+                                                        <li>8</li>
+                                                        <li>9</li>
+                                                        <li>10</li>
+                                                        <li>11</li>
+                                                        <li>12</li>
+                                                    </ul>
+                                                </ul>
+                                            </div>
+                                            <div class="select_list select_date">
+                                                <ul class="select_box">
+                                                    <li>일</li>
+                                                    <ul class="item_list">
+                                                        <li>1</li>
+                                                        <li>2</li>
+                                                        <li>3</li>
+                                                        <li>4</li>
+                                                        <li>5</li>
+                                                        <li>6</li>
+                                                        <li>7</li>
+                                                        <li>8</li>
+                                                        <li>9</li>
+                                                        <li>10</li>
+                                                    </ul>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="upload_item">
+                                        <div class="flex">
+                                            <div class="flex_50">
+                                                <label>작품 크기 ( h x w cm )</label>
+                                                <div class="select_list select_size">
+                                                    <ul class="select_box">
+                                                        <li>작품 크기를 선택해 주세요.</li>
+                                                        <ul class="item_list">
+                                                            <li>0호 (14 x 18)</li>
+                                                            <li>1호 (15.8 x 22.7)</li>
+                                                            <li>2호 (25.8 x 17.9)</li>
+                                                            <li>3호 (22 x 27.3)</li>
+                                                            <li>4호 (24.2 x 33.4)</li>
+                                                        </ul>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="typing mr12 ml24">
+                                                <label>Width ( cm )</label>
+                                                <input type="text" placeholder="Width" class="size_disabled" disabled>
+                                            </div>
+                                            <div class="typing">
+                                                <label>Height ( cm )</label>
+                                                <input type="text" placeholder="Height" class="size_disabled" disabled>
+                                            </div>
+                                        </div>
+                                        <div class="ratio_bottom">
+                                            <button type="button" class="mt12 btn_able">직접 입력</button>
+                                        </div>
+                                    </div>
+                                    <div class="upload_item">
+                                        <label>카테고리</label>
+                                        <div class="select_list select_category">
+                                            <ul class="select_box">
+                                                <li>카테고리를 선택해 주세요.</li>
+                                                <ul class="item_list">
+                                                    <li>미술 (평면)</li>
+                                                    <li>조각</li>
+                                                    <li>공예</li>
+                                                    <li>사진</li>
+                                                    <li>디자인/가구</li>
+                                                </ul>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="upload_item upload_item_hide">
+                                        <label>소재</label>
+                                        <div class="item_category mb12">
+                                            <button type="button">아크릴</button>
+                                            <button type="button">오일</button>
+                                            <button type="button">수채화</button>
+                                            <button type="button">동양화</button>
+                                            <button type="button">판화</button>
+                                            <button type="button">믹스미디어</button>
+                                        </div>
+                                        <input type="text" placeholder="소재를 입력해 주세요.">
+                                        <span>* 믹스미디어의 대표 소재는 5개까지 입력할 수 있습니다.</span>
+                                    </div>
+                                    <div class="upload_item">
+                                        <label>태그 설정</label>
+                                        <input type="text" placeholder="태그를 입력해 주세요.">
+                                        <span>* 작품의 특징, 유형 등을 작성해주세요. 작품 검색시에 이용 됩니다.</span>
+                                    </div>
+                                    <div class="upload_item">
+                                        <div class="flex">
+                                            <div class="mr12">
+                                                <label>가격</label>
+                                                <input type="text" placeholder="가격을 입력해 주세요." class="input_185">
+                                            </div>
+                                            <div>
+                                                <label>상태</label>
+                                                <div class="select_list select_status">
+                                                    <ul class="select_box">
+                                                        <li>선택</li>
+                                                        <ul class="item_list">
+                                                            <li>sale</li>
+                                                            <li>reserved</li>
+                                                            <li>sold</li>
+                                                        </ul>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="tab_cnt_bottom">
+                                <button type="button" class="btn_upload">업로드</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </body>
+</html>

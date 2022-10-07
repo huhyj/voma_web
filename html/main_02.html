@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>VOMA</title>
+    
+        <!-- Jquery -->
+        <script src="../js/jquery-3.4.1.min.js"></script>
+        <script src="../js/common.js"></script>
+
+        <!-- CSS -->
+        <link href="../css/main.css" rel="stylesheet">
+        <link href="../css/button.css" rel="stylesheet">
+        <link href="../css/font.css" rel="stylesheet">
+        <link href="../css/common.css" rel="stylesheet">
+        <link href="../css/reset.css" rel="stylesheet">
+	</head>
+
+	<body>
+        <!-- search -->
+        <div class="wrapper">
+
+            <!-- header -->
+            <header class="header">
+                <div class="gnb_box">
+
+                    <!-- logo -->
+                    <div class="header_1">
+                        <button type="button" class="btn_logo">로고</button>
+                    </div>
+
+                    <!-- tab -->
+                    <div class="header_2">
+                        <ul>
+                            <li onclick="location.href='./main_01.html'">1. 전시정보 입력</li>
+                            <li class="on" onclick="location.href='./main_02.html'">2. 템플릿 설정</li>
+                            <li onclick="location.href='./main_03.html'">3. 갤러리 디자인</li>
+                            <li onclick="location.href='./main_04.html'">4. 작품 전시</li>
+                            <li onclick="location.href='./main_05.html'">5. 투어 설정</li>
+                        </ul>
+                    </div>
+
+                    <!-- gnb -->
+                    <div class="header_3">
+                        <div class="">
+                            <!-- <button type="button" class="btn_gnb btn_gnb1">
+                                <span></span>
+                            </button>
+                            <button type="button" class="btn_gnb btn_gnb2"></button> -->
+                            <button type="button" class="btn_gnb btn_gnb3"></button>
+                            <button type="button" class="btn_gnb btn_gnb4"></button>
+                        </div>
+                    </div>
+
+                    <!-- profile -->
+                    <div class="header_4">
+                        <ul>
+                            <li>
+                                <a href="javascript:;">
+                                    <div class="top_profile_img flexLineCenter">
+                                        <img src="../images/etc/profile.png" alt="프로필"/>
+                                        <div class="top_profile flexColumnSpace">
+                                            <p class="ellipsis">Kim Artvoma</p>
+                                            <p class="ellipsis mt5">#관람객 #컬렉터 #셀러</p>
+                                        </div>
+                                        <button type="button" class="btn_down btn_down_bk">열기</button>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+
+                        <!-- profile_click -->
+                        <div class="tooltip_wt tooltip_wt2">
+                            <div class="tooltip_box_wt">
+                                <ul class="tooltip_top">
+                                    <li onclick="location.href='./my_profile.html'">
+                                        <button type="button" class="btn_h_profile">My Profile</button>
+                                    </li>
+                                    <li onclick="location.href='./my_art.html'">
+                                        <button type="button" class="btn_h_art">My Art</button>
+                                    </li>
+                                    <li onclick="location.href='./my_gallery.html'">
+                                        <button type="button" class="btn_h_gallery">My Gallery</button>
+                                    </li>
+                                </ul>
+                                <ul class="tooltip_bottom">
+                                    <li>
+                                        <button type="button" class="btn_h_logout">로그아웃</button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- profile-nonLogin -->
+                    <div class="header_5">
+                        <button type="button" class="btn_login2" onclick="location.href='./login.html'">로그인</button>
+                    </div>
+
+                </div>
+            </header>
+
+             <!-- content_left -->
+             <section class="cnt_left">
+                <div class="temp_box">
+                    <div class="temp_tit">
+                        <p class="mb12">템플릿</p>
+                        <span>템플릿을 원하는 순서대로 우측 창의 선택 박스로 드래그 해주세요.</span>
+                        <span>우측 창에서 템플릿 순서를 수정할 수 있어요.</span>
+                    </div>
+                    <div class="temp_cnt">
+                        <div class="temp_inner">
+                            <div class="container">
+                                <div class="temp_inner_top flexSpaceCenter">
+                                    <span>기본형 1</span>
+                                    <button type="button" class="btn_sample">샘플</button>
+                                </div>
+                                <div class="temp_inner_mid flexSpaceCenter">
+                                    <div class="temp_inner_mid_left">
+                                        <img src="../images/etc/main_02_sample.png">
+                                    </div>
+                                    <div class="temp_inner_mid_right">
+                                        <div class="container">
+                                            <label>면적</label>
+                                            <input type="text" value="20M X 20M">
+                                            <label>벽 높이</label>
+                                            <input type="text" value="7m">
+                                            <label>전시 가능 수</label>
+                                            <input type="text" value="20 작품">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="temp_inner_bottom flexSpaceCenter">
+                                    <div class="temp_inner_bottom_img">
+                                        <img src="../images/etc/main_02_sample1.png" alt="샘플이미지"/>
+                                    </div>
+                                    <div class="temp_inner_bottom_img">
+                                        <img src="../images/etc/main_02_sample2.png" alt="샘플이미지"/>
+                                    </div>
+                                    <div class="temp_inner_bottom_img">
+                                        <img src="../images/etc/main_02_sample3.png" alt="샘플이미지"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="temp_inner">
+                            <div class="container">
+                                <div class="temp_inner_top flexSpaceCenter">
+                                    <span>기본형 2</span>
+                                    <button type="button" class="btn_sample">샘플</button>
+                                </div>
+                                <div class="temp_inner_mid flexSpaceCenter">
+                                    <div class="temp_inner_mid_left">
+                                        <img src="../images/etc/main_02_sample.png">
+                                    </div>
+                                    <div class="temp_inner_mid_right">
+                                        <div class="container">
+                                            <label>면적</label>
+                                            <input type="text" value="30평 (100m2)">
+                                            <label>벽 높이</label>
+                                            <input type="text" value="7m">
+                                            <label>전시 가능 수</label>
+                                            <input type="text" value="20 작품">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="temp_inner_bottom flexSpaceCenter">
+                                    <div class="temp_inner_bottom_img">
+                                        <img src="../images/etc/main_02_sample1.png" alt="샘플이미지"/>
+                                    </div>
+                                    <div class="temp_inner_bottom_img">
+                                        <img src="../images/etc/main_02_sample2.png" alt="샘플이미지"/>
+                                    </div>
+                                    <div class="temp_inner_bottom_img">
+                                        <img src="../images/etc/main_02_sample3.png" alt="샘플이미지"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="temp_inner">
+                            <div class="container">
+                                <div class="temp_inner_top flexSpaceCenter">
+                                    <span>Basic 1</span>
+                                    <button type="button" class="btn_sample">샘플</button>
+                                </div>
+                                <div class="temp_inner_mid flexSpaceCenter">
+                                    <div class="temp_inner_mid_left">
+                                        <img src="../images/etc/main_02_sample.png">
+                                    </div>
+                                    <div class="temp_inner_mid_right">
+                                        <div class="container">
+                                            <label>면적</label>
+                                            <input type="text" value="30평 (100m2)">
+                                            <label>벽 높이</label>
+                                            <input type="text" value="7m">
+                                            <label>전시 가능 수</label>
+                                            <input type="text" value="20 작품">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="temp_inner_bottom flexSpaceCenter">
+                                    <div class="temp_inner_bottom_img">
+                                        <img src="../images/etc/main_02_sample1.png" alt="샘플이미지"/>
+                                    </div>
+                                    <div class="temp_inner_bottom_img">
+                                        <img src="../images/etc/main_02_sample2.png" alt="샘플이미지"/>
+                                    </div>
+                                    <div class="temp_inner_bottom_img">
+                                        <img src="../images/etc/main_02_sample3.png" alt="샘플이미지"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- content_right -->
+            <section class="cnt_right">
+                <div class="cnt_right_top cnt_right_top_1">
+                    <div class="container2">
+                        <div class="cnt_right_tit">
+                            <div class="flexSpaceCenter">
+                                <span>템플릿 순서</span>
+                            </div>
+                            <div class="mt12">
+                                <div class="temp_area mb12">
+                                    <div class="temp_before flexCenterAll">
+                                        <span>템플릿을 드래그 해주세요.</span>
+                                    </div>
+                                    <div class="temp_after">
+                                        <div class="flexColumn pad12">
+                                            <div class="flexSpaceCenter mb12">
+                                                <strong>1</strong>
+                                                <button type="button" class="btn_remove">삭제</button>
+                                            </div>
+                                            <div class="temp_after_img">
+                                                <img src="../images/etc/main_04_sample2.png" alt="샘플이미지"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="temp_area mb12">
+                                    <div class="temp_before flexCenterAll">
+                                        <span>템플릿을 드래그 해주세요.</span>
+                                    </div>
+                                    <div class="temp_after">
+                                        <div class="flexColumn pad12">
+                                            <div class="flexSpaceCenter mb12">
+                                                <strong>2</strong>
+                                                <button type="button" class="btn_remove">삭제</button>
+                                            </div>
+                                            <div class="temp_after_img">
+                                                <img src="../images/etc/main_04_sample2.png" alt="샘플이미지"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="temp_area mb12">
+                                    <div class="temp_before flexCenterAll">
+                                        <span>템플릿을 드래그 해주세요.</span>
+                                    </div>
+                                    <div class="temp_after">
+                                        <div class="flexColumn pad12">
+                                            <div class="flexSpaceCenter mb12">
+                                                <strong>3</strong>
+                                                <button type="button" class="btn_remove">삭제</button>
+                                            </div>
+                                            <div class="temp_after_img">
+                                                <img src="../images/etc/main_04_sample2.png" alt="샘플이미지"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cnt_right_bottom">
+                    <div class="wrap_100 flexLineCenter">
+                        <button type="button" class="bg_grey">이전</button>
+                        <button type="button" class="bg_bk">다음</button>
+                    </div>
+                </div>
+            </section>
+
+            <div class="sample_page">
+                <div class="sample_bg">
+                    <button type="button" class="btn_out">샘플 보기 종료</button>
+                </div>
+            </div>
+
+        </div>
+    </body>
+</html>

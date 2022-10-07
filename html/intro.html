@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>VOMA</title>
+    
+        <!-- Jquery -->
+        <script src="../js/jquery-3.4.1.min.js"></script>
+        <script src="../js/common.js"></script>
+
+        <!-- CSS -->
+        <link href="../css/main.css" rel="stylesheet">
+        <link href="../css/button.css" rel="stylesheet">
+        <link href="../css/font.css" rel="stylesheet">
+        <link href="../css/common.css" rel="stylesheet">
+        <link href="../css/reset.css" rel="stylesheet">
+	</head>
+
+	<body>
+        <!-- search -->
+        <div class="wrapper wrapper_intro wrap_100">
+
+            <!-- header -->
+            <header class="header_login">
+                <div class="gnb_box">
+
+                    <!-- logo -->
+                    <div class="header_1">
+                        <button type="button" class="btn_logo">로고</button>
+                    </div>
+
+                    <!-- tab -->
+                    <div class="header_2">
+                        <ul>
+                            <li>이용안내</li>
+                            <li>구독권</li>
+                        </ul>
+                    </div>
+
+                    <!-- profile-login -->
+                    <div class="header_4">
+                        <ul>
+                            <li>
+                                <a href="javascript:;">
+                                    <div class="top_profile_img flexLineCenter">
+                                        <img src="../images/etc/profile.png" alt="프로필"/>
+                                        <div class="top_profile flexColumnSpace">
+                                            <p class="ellipsis">Kim Artvoma</p>
+                                            <p class="ellipsis mt5">#관람객 #컬렉터 #셀러</p>
+                                        </div>
+                                        <button type="button" class="btn_down">열기</button>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+
+                        <!-- profile_click -->
+                        <div class="tooltip_wt tooltip_wt2">
+                            <div class="tooltip_box_wt">
+                                <ul class="tooltip_top">
+                                    <li onclick="location.href='./my_profile.html'">
+                                        <button type="button" class="btn_h_profile">My Profile</button>
+                                    </li>
+                                    <li onclick="location.href='./my_art.html'">
+                                        <button type="button" class="btn_h_art">My Art</button>
+                                    </li>
+                                    <li onclick="location.href='./my_gallery.html'">
+                                        <button type="button" class="btn_h_gallery">My Gallery</button>
+                                    </li>
+                                </ul>
+                                <ul class="tooltip_bottom">
+                                    <li>
+                                        <button type="button" class="btn_h_logout">로그아웃</button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- profile-nonLogin -->
+                    <div class="header_5">
+                        <button type="button" class="btn_login" onclick="location.href='./login.html'">로그인</button>
+                    </div>
+
+                </div>
+            </header>
+
+            <!-- content_ -->
+            <section class="cnt_center">
+                <div class="flexColumnSpace" style="height: 100%;">
+                    <div class="intro_mid flexColumnCenter">
+                        <p><strong>Life is Art</strong></p>
+                        <h1>공간의 가치를<span>만들어 봄</span></h1>
+                        <p class="opa_80">자신만의 공간을 창조하고 작품을 선정해 보세요.</p>
+                        <button type="button" class="btn_wt_18 blue mt60 mb30" onclick="location.href='./main_01.html'">Start Now</button>
+                    </div>
+                    <div class="intro_bottom">
+                        <div class="flexColumnCenter">
+                            <p class="opa_80">갤러리 관람 서비스는 모바일앱으로 제공됩니다.</p>
+                            <div class="btns_area_app">
+                                <button type="button" class="btn_app btn_apple">앱스토어</button>
+                                <button type="button" class="btn_app btn_google">플레이스토어</button>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" class="btn_footer">FOOTER</button>
+                </div>
+            </section>
+
+            <footer class="footer">
+                <div class="flexSpaceCenter">
+                    <div class="footer_left flexLineCenter">
+                        <img src="../images/etc/logo.svg" alt="보마로고">
+                        <ul>
+                            <li><strong>회사소개</strong></li>
+                            <li class="blue"><strong>이용정책</strong></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <span><strong>VOMA</strong> COPYRIGHT VOMA. ALL RIGHTS RESERVED</span>
+                    </div>
+                    <div class="footer_right">
+                        <ul>
+                            <li><strong>T.</strong> 1688-0000</li>
+                            <li><strong>E.</strong> Service@Voma.co.kr</li>
+                        </ul>
+                    </div>
+                </div>
+            </footer>
+
+        </div>
+    </body>
+</html>

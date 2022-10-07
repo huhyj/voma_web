@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>VOMA</title>
+    
+        <!-- Jquery -->
+        <script src="../js/jquery-3.4.1.min.js"></script>
+        <script src="../js/common.js"></script>
+
+        <!-- CSS -->
+        <link href="../css/main.css" rel="stylesheet">
+        <link href="../css/button.css" rel="stylesheet">
+        <link href="../css/font.css" rel="stylesheet">
+        <link href="../css/common.css" rel="stylesheet">
+        <link href="../css/reset.css" rel="stylesheet">
+	</head>
+
+	<body>
+        <!-- search -->
+        <div class="wrapper">
+
+            <!-- header -->
+            <header class="header">
+                <div class="gnb_box">
+
+                    <!-- logo -->
+                    <div class="header_1">
+                        <button type="button" class="btn_logo">로고</button>
+                    </div>
+
+                    <!-- tab -->
+                    <div class="header_2">
+                        <ul>
+                            <li class="on" onclick="location.href='./information.html'">이용안내</li>
+                            <li onclick="location.href='./subscription.html'">구독권</li>
+                        </ul>
+                    </div>
+
+                    <!-- gnb -->
+                    <div class="header_3">
+                        <!-- <div class="">
+                            <button type="button" class="btn_gnb btn_gnb1">
+                                <span></span>
+                            </button>
+                            <button type="button" class="btn_gnb btn_gnb2"></button>
+                            <button type="button" class="btn_gnb btn_gnb3"></button>
+                            <button type="button" class="btn_gnb btn_gnb4"></button>
+                        </div> -->
+                    </div>
+
+                    <!-- profile -->
+                    <div class="header_4">
+                        <ul>
+                            <li>
+                                <a href="javascript:;">
+                                    <div class="top_profile_img flexLineCenter">
+                                        <img src="../images/etc/profile.png" alt="프로필"/>
+                                        <div class="top_profile flexColumnSpace">
+                                            <p class="ellipsis">Kim Artvoma</p>
+                                            <p class="ellipsis mt5">#관람객 #컬렉터 #셀러</p>
+                                        </div>
+                                        <button type="button" class="btn_down btn_down_bk">열기</button>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+
+                        <!-- profile_click -->
+                        <div class="tooltip_wt tooltip_wt2">
+                            <div class="tooltip_box_wt">
+                                <ul class="tooltip_top">
+                                    <li onclick="location.href='./my_profile.html'">
+                                        <button type="button" class="btn_h_profile">My Profile</button>
+                                    </li>
+                                    <li onclick="location.href='./my_art.html'">
+                                        <button type="button" class="btn_h_art">My Art</button>
+                                    </li>
+                                    <li onclick="location.href='./my_gallery.html'">
+                                        <button type="button" class="btn_h_gallery">My Gallery</button>
+                                    </li>
+                                </ul>
+                                <ul class="tooltip_bottom">
+                                    <li>
+                                        <button type="button" class="btn_h_logout">로그아웃</button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- profile-nonLogin -->
+                    <div class="header_5">
+                        <button type="button" class="btn_login2" onclick="location.href='./login.html'">로그인</button>
+                    </div>
+
+                </div>
+            </header>
+
+            <!-- cnt_center -->
+            <section class="cnt_center cnt_center_information">
+                <div class="cnt_center_inner flexColumnCenter pb60">
+                    <h1 class="mb24">이용안내</h1>
+                    <h2>VOMA란 Virtual Online Metaverse Art의 약자로 메타버스 갤러리입니다.</h2>
+                    <h2 class="mb10">VOMA는 유저에게 <span class="blue">갤러리·작품 감상 서비스</span> 및 <span class="blue">갤러리 제작 솔루션</span>을 제공합니다.</h2>
+                    <h3>내가 가지고 있는 미술품, 사진 그리고 경험까지도 예술이 되는 갤러리를 만들어보세요.</h3>
+                </div>
+
+                <div class="cnt_center_mid">
+                    <div class="tab_wrap">
+                        <ul class="tab">
+                            <li class="on" data-tab="tab_10"><a href="javascript:;">전시정보 입력</a></li>
+                            <li data-tab="tab_11"><a href="javascript:;">템플릿 설정</a></li>
+                            <li data-tab="tab_12"><a href="javascript:;">갤러리 디자인</a></li>
+                            <li data-tab="tab_13"><a href="javascript:;">작품전시</a></li>
+                            <li data-tab="tab_14"><a href="javascript:;">투어설정</a></li>
+                            <li data-tab="tab_15"><a href="javascript:;">갤러리 공유</a></li>
+                        </ul>
+                    </div>
+                    <div class="tab_cnt_wrap">
+                        <div id="tab_10" class="tab_cnt bg_grey2">
+                            <div class="cnt_center_inner">
+                                <h4 class="mb60">전시정보 입력</h4>
+                                <div class="tab_cnt_img">
+                                    <img src="../images/etc/bg_info_01.png" alt="전시정보 입력 이용방법"/>
+                                </div>
+                                <div class="flexSpace pt40">
+                                    <div class="tab_cnt_txt">
+                                        <p>갤러리의 전시정보, 갤러리 유형, 해시태그를 입력할 수 있습니다.</p>
+                                        <p>입력한 전시기간이 만료되면 자동으로 비공개 전시로 설정됩니다.</p>
+                                    </div>
+                                    <div class="tab_cnt_txt">
+                                        <p>공개하고 싶지 않은 갤러리일 경우 비공개를 선택하시면 됩니다.</p>
+                                        <p>카테고리와 해시태그는 보마 앱에서 갤러리 검색에 활용됩니다.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="tab_11" class="tab_cnt bg_grey2">
+                            <div class="cnt_center_inner">
+                                <h4 class="mb60">템플릿 설정</h4>
+                                <div class="tab_cnt_img">
+                                    <img src="../images/etc/bg_info_02.png" alt="템플릿 설정 이용방법"/>
+                                </div>
+                                <div class="flexSpace pt40">
+                                    <div class="tab_cnt_txt">
+                                        <p>9개의 갤러리 템플릿 중 최대 4개까지 선택할 수 있습니다.</p>
+                                        <p>템플릿의 샘플 갤러리를 보고 나만의 전시를 만들어 보세요.</p>
+                                    </div>
+                                    <div class="tab_cnt_txt">
+                                        <p>템플릿 순서는 우측창에서 드래그를 통해 조정 가능합니다.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="tab_12" class="tab_cnt bg_grey2">
+                            <div class="cnt_center_inner">
+                                <h4 class="mb60">갤러리 디자인</h4>
+                                <div class="tab_cnt_img">
+                                    <img src="../images/etc/bg_info_03.png" alt="갤러리 디자인 이용방법"/>
+                                </div>
+                                <div class="flexSpace pt40">
+                                    <div class="tab_cnt_txt">
+                                        <p>영역 별로 벽의 색을 설정할 수 있고, 원하는 색이 없다면</p>
+                                        <p>추가 옵션에서 RGB/HEX 값을 직접 입력할 수 있습니다.</p>
+                                    </div>
+                                    <div class="tab_cnt_txt">
+                                        <p>바닥의 텍스쳐를 설정할 수 있습니다.</p>
+                                        <p>벽/바닥 설정은 템플릿 별로 적용 가능합니다.</p>
+                                    </div>
+                                </div>
+                            </div>                            
+                        </div>
+
+                        <div id="tab_13" class="tab_cnt bg_grey2">
+                            <div class="cnt_center_inner">
+                                <h4 class="mb60">작품전시</h4>
+                                <div class="tab_cnt_img">
+                                    <img src="../images/etc/bg_info_04.png" alt="작품전시 이용방법"/>
+                                </div>
+                                <div class="flexSpace pt40">
+                                    <div class="tab_cnt_txt">
+                                        <p>마이페이지에 있는 라이브러리에 업로드된 작품을 갤러리로 불러올 수 있습니다.</p>
+                                        <p>갤러리 제작 중 업로드된 작품은 자동으로 라이브러리에 저장됩니다.</p>
+                                        <p>전시에 필요한 소품을 갤러리에 추가할 수 있습니다.</p>
+                                    </div>
+                                    <div class="tab_cnt_txt">
+                                        <p>라이브러리가 비어있거나 작품을 추가하고 싶다면 새로운 작품을 업로드할 수 있습니다.</p>
+                                        <p>갤러리 소개, 작가정보 등을 텍스트로 보여줄 수 있습니다.</p>
+                                        <p>작품과 소품은 드래그를 통해 조작할 수 있습니다.</p>
+                                        <p>전시된 작품을 조작하여 크기를 조절할 수 있으며, 미세조정은 우측창에서 가능합니다.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="tab_14" class="tab_cnt bg_grey2">
+                            <div class="cnt_center_inner">
+                                <h4 class="mb60">투어설정</h4>
+                                <div class="tab_cnt_img">
+                                    <img src="../images/etc/bg_info_05.png" alt="투어설정 이용방법"/>
+                                </div>
+                                <div class="flexSpace pt40">
+                                    <div class="tab_cnt_txt">
+                                        <p>초기 투어 동선은 서비스가 제공하는 최상의 동선입니다.</p>
+                                        <p>우측창에서 드래그를 통해 투어 동선을 변경할 수 있으며, X를 통해 투어동선에서 삭제할 수 있습니다.</p>
+                                        <p>투어 시작 지점의 시야 방향을 설정할 수 있습니다.</p>
+                                    </div>
+                                    <div class="tab_cnt_txt">
+                                        <p>투어동선에 추가하고자 하는 작품이 있을 경우 혹은 실수로 투어동선을 삭제했을 경우 우측창 상단의 버튼을 통해 투어추가를 할 수 있습니다.</p>
+                                        <p>갤러리와 어울리는 배경음악을 선택해보세요.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="tab_15" class="tab_cnt bg_grey2">
+                            <div class="cnt_center_inner">
+                                <h4 class="mb60">갤러리 공유</h4>
+                                <div class="tab_cnt_img">
+                                    <img src="../images/etc/bg_info_06.png" alt="갤러리 공유 이용방법"/>
+                                </div>
+                                <div class="flexSpace pt40">
+                                    <div class="tab_cnt_txt">
+                                        <p>갤러리의 대표이미지를 설정해보세요.</p>
+                                        <p>대표이미지를 수정할 경우 미리보기가 진행됩니다.</p>
+                                    </div>
+                                    <div class="tab_cnt_txt">
+                                        <p>Url을 통해 내 갤러리를 외부에 공유해보세요.</p>
+                                    </div>
+                                </div>
+                            </div>                            
+                        </div>
+                    </div>
+                        
+                </div>
+            </section>
+
+            <footer class="profile_footer footer">
+                <div class="flexSpaceCenter">
+                    <div class="footer_left flexLineCenter">
+                        <img src="../images/etc/logo.svg" alt="보마로고">
+                        <ul>
+                            <li><strong>회사소개</strong></li>
+                            <li class="blue" onclick="location.href='./terms.html'"><strong>이용정책</strong></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <span><strong>VOMA</strong> COPYRIGHT VOMA. ALL RIGHTS RESERVED</span>
+                    </div>
+                    <div class="footer_right">
+                        <ul>
+                            <li><strong>T.</strong> 1688-0000</li>
+                            <li><strong>E.</strong> Service@Voma.co.kr</li>
+                        </ul>
+                    </div>
+                </div>
+            </footer>
+
+        </div>
+    </body>
+</html>

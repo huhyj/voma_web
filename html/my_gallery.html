@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>VOMA</title>
+    
+        <!-- Jquery -->
+        <script src="../js/jquery-3.4.1.min.js"></script>
+        <script src="../js/common.js"></script>
+
+        <!-- CSS -->
+        <link href="../css/main.css" rel="stylesheet">
+        <link href="../css/button.css" rel="stylesheet">
+        <link href="../css/font.css" rel="stylesheet">
+        <link href="../css/common.css" rel="stylesheet">
+        <link href="../css/reset.css" rel="stylesheet">
+	</head>
+
+	<body>
+        <!-- search -->
+        <div class="wrapper">
+
+            <!-- header -->
+            <header class="header">
+                <div class="gnb_box">
+
+                    <!-- logo -->
+                    <div class="header_1">
+                        <button type="button" class="btn_logo">로고</button>
+                    </div>
+
+                    <!-- tab -->
+                    <div class="header_2">
+                        <ul>
+                            <li onclick="location.href='./information.html'">이용안내</li>
+                            <li onclick="location.href='./subscription.html'">구독권</li>
+                        </ul>
+                    </div>
+
+                    <!-- gnb -->
+                    <div class="header_3">
+                        <!-- <div class="">
+                            <button type="button" class="btn_gnb btn_gnb1">
+                                <span></span>
+                            </button>
+                            <button type="button" class="btn_gnb btn_gnb2"></button>
+                            <button type="button" class="btn_gnb btn_gnb3"></button>
+                            <button type="button" class="btn_gnb btn_gnb4"></button>
+                        </div> -->
+                    </div>
+
+                    <!-- profile -->
+                    <div class="header_4">
+                        <ul>
+                            <li>
+                                <a href="javascript:;">
+                                    <div class="top_profile_img flexLineCenter">
+                                        <img src="../images/etc/profile.png" alt="프로필"/>
+                                        <div class="top_profile flexColumnSpace">
+                                            <p class="ellipsis">Kim Artvoma</p>
+                                            <p class="ellipsis mt5">#관람객 #컬렉터 #셀러</p>
+                                        </div>
+                                        <button type="button" class="btn_down btn_down_bk">열기</button>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+
+                        <!-- profile_click -->
+                        <div class="tooltip_wt tooltip_wt2">
+                            <div class="tooltip_box_wt">
+                                <ul class="tooltip_top">
+                                    <li onclick="location.href='./my_profile.html'">
+                                        <button type="button" class="btn_h_profile">My Profile</button>
+                                    </li>
+                                    <li onclick="location.href='./my_art.html'">
+                                        <button type="button" class="btn_h_art">My Art</button>
+                                    </li>
+                                    <li class="on" onclick="location.href='./my_gallery.html'">
+                                        <button type="button" class="btn_h_gallery">My Gallery</button>
+                                    </li>
+                                </ul>
+                                <ul class="tooltip_bottom">
+                                    <li>
+                                        <button type="button" class="btn_h_logout">로그아웃</button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- profile-nonLogin -->
+                    <div class="header_5">
+                        <button type="button" class="btn_login2" onclick="location.href='./login.html'">로그인</button>
+                    </div>
+
+                </div>
+            </header>
+
+            <!-- cnt_center -->
+            <section class="cnt_center cnt_center_gallery">
+                <div class="cnt_center_inner flexColumnCenter">
+                    <div class="cnt_center_top">
+                        <p class="mb60">My Gallery</p>
+                    </div>
+
+                    <div class="cnt_center_mid">
+                        <div class="profile_search mb40">
+                            <div class="profile_search">
+                                <input type="text" placeholder="검색">
+                                <button type="button" class="btn_search">검색</button>
+                            </div>
+                        </div>
+                        <div class="profile_mid">
+                            <div class="flexCenterWrap">
+                                <div class="mar36_40">
+                                    <div class="area_img area_img_202">
+                                        <div class="btns_area">
+                                            <div class="flexCenterAll">
+                                                <button type="button" class="btn_border_wt btn_edit4">수정</button>
+                                                <button type="button" class="btn_border_wt btn_remove3">삭제</button>
+                                            </div>
+                                        </div>
+                                        <img src="../images/etc/bg_profile1.png" alt="샘플이미지"/>
+                                        <div class="area_img_process"></div>
+                                    </div>
+                                    <div class="area_txt">
+                                        <div class="progress_box">
+                                            <span>4일전 편집</span>
+                                            <span class="area_txt_progress">진행중 (1/5)</span>
+                                        </div>
+                                        <p class="area_txt_tit">콘스탄틴 현대의 한 가운데</p>
+                                    </div>
+                                </div>
+                                <div class="mar36_40">
+                                    <div class="area_img area_img_202">
+                                        <div class="btns_area">
+                                            <div class="flexCenterAll">
+                                                <button type="button" class="btn_border_wt btn_gallery">갤러리</button>
+                                                <button type="button" class="btn_border_wt btn_edit4">수정</button>
+                                                <button type="button" class="btn_border_wt btn_remove3">삭제</button>
+                                            </div>
+                                        </div>
+                                        <img src="../images/etc/bg_profile2.png" alt="샘플이미지"/>
+                                    </div>
+                                    <div class="area_txt">
+                                        <div class="progress_box">
+                                            <span>13일전 편집</span>
+                                            <span class="area_txt_progress" style="display: none;">진행중 (1/5)</span>
+                                        </div>
+                                        <p class="area_txt_tit">The Color Spot : 꿈속의 자연 작가 커뮤니티가 참여한 이 전시는 자연의 모습을 다루는 일러스트, 꿈속의 환상을 표현하는 미디어아트 작품을 선보인다.</p>
+                                    </div>
+                                </div>
+                                <div class="mar36_40">
+                                    <div class="area_img area_img_202">
+                                        <div class="btns_area">
+                                            <div class="flexCenterAll">
+                                                <button type="button" class="btn_border_wt btn_gallery">갤러리</button>
+                                                <button type="button" class="btn_border_wt btn_edit4">수정</button>
+                                                <button type="button" class="btn_border_wt btn_remove3">삭제</button>
+                                            </div>
+                                        </div>
+                                        <img src="../images/etc/bg_profile1.png" alt="샘플이미지"/>
+                                    </div>
+                                    <div class="area_txt">
+                                        <div class="progress_box">
+                                            <span>2달전 편집</span>
+                                            <span class="area_txt_progress" style="display: none;">진행중 (1/5)</span>
+                                        </div>
+                                        <p class="area_txt_tit">Sole Infinity</p>
+                                    </div>
+                                </div>
+                                <div class="mar36_40">
+                                    <div class="area_img area_img_202">
+                                        <div class="btns_area">
+                                            <div class="flexCenterAll">
+                                                <button type="button" class="btn_border_wt btn_edit4">수정</button>
+                                                <button type="button" class="btn_border_wt btn_remove3">삭제</button>
+                                            </div>
+                                        </div>
+                                        <img src="../images/etc/bg_profile3.png" alt="샘플이미지"/>
+                                    </div>
+                                    <div class="area_txt">
+                                        <div class="progress_box">
+                                            <span>2달전 편집</span>
+                                            <span class="area_txt_progress">진행중 (1/5)</span>
+                                        </div>
+                                        <p class="area_txt_tit">MMCA 이건희 컬렉션 특별전 : 모네와 피카소, 파리의 아름다운 순간들</p>
+                                    </div>
+                                </div>
+                                <div class="mar36_40">
+                                    <div class="area_img area_img_202">
+                                        <div class="btns_area">
+                                            <div class="flexCenterAll">
+                                                <button type="button" class="btn_border_wt btn_gallery">갤러리</button>
+                                                <button type="button" class="btn_border_wt btn_edit4">수정</button>
+                                                <button type="button" class="btn_border_wt btn_remove3">삭제</button>
+                                            </div>
+                                        </div>
+                                        <img src="../images/etc/bg_profile1.png" alt="샘플이미지"/>
+                                    </div>
+                                    <div class="area_txt">
+                                        <div class="progress_box">
+                                            <span>13일전 편집</span>
+                                            <span class="area_txt_progress" style="display: none;">진행중 (1/5)</span>
+                                        </div>
+                                        <p class="area_txt_tit">The Color Spot : 꿈속의 자연 작가 커뮤니티가 참여한 이 전시는 자연의 모습을 다루는 일러스트, 꿈속의 환상을 표현하는 미디어아트 작품을 선보인다.</p>
+                                    </div>
+                                </div>
+                                <div class="mar36_40">
+                                    <div class="area_img area_img_202">
+                                        <div class="btns_area">
+                                            <div class="flexCenterAll">
+                                                <button type="button" class="btn_border_wt btn_gallery">갤러리</button>
+                                                <button type="button" class="btn_border_wt btn_edit4">수정</button>
+                                                <button type="button" class="btn_border_wt btn_remove3">삭제</button>
+                                            </div>
+                                        </div>
+                                        <img src="../images/etc/bg_profile1.png" alt="샘플이미지"/>
+                                    </div>
+                                    <div class="area_txt">
+                                        <div class="progress_box">
+                                            <span>2달전 편집</span>
+                                            <span class="area_txt_progress" style="display: none;">진행중 (1/5)</span>
+                                        </div>
+                                        <p class="area_txt_tit">Sole Infinity</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="area_center">
+                                <button type="button" class="btn_grey_18">더 보기</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <footer class="profile_footer footer">
+                <div class="flexSpaceCenter">
+                    <div class="footer_left flexLineCenter">
+                        <img src="../images/etc/logo.svg" alt="보마로고">
+                        <ul>
+                            <li><strong>회사소개</strong></li>
+                            <li class="blue" onclick="location.href='./terms.html'"><strong>이용정책</strong></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <span><strong>VOMA</strong> COPYRIGHT VOMA. ALL RIGHTS RESERVED</span>
+                    </div>
+                    <div class="footer_right">
+                        <ul>
+                            <li><strong>T.</strong> 1688-0000</li>
+                            <li><strong>E.</strong> Service@Voma.co.kr</li>
+                        </ul>
+                    </div>
+                </div>
+            </footer>
+
+            <!-- popup-어플리케이션 -->
+            <div class="cnt_popup3 bg_popup_dark">
+                <div class="wrap_100 flexCenterAll">
+                    <div class="popup_box">
+                        <strong>갤러리는 어플리케이션으로 감상하실 수 있습니다.</strong>
+                        <div class="popup_app">
+                            <div class="flexSpaceCenter">
+                                <a href="javascript:;">
+                                    <img src="../images/icon/bg_android.svg" alt="구글플레이"/>
+                                </a>
+                                <a href="javascript:;">
+                                    <img src="../images/icon/bg_apple.svg" alt="앱스토어"/>
+                                </a>
+                            </div>
+                            <div class="flexAroundCenter">
+                                <div class="flexColumnCenter">
+                                    <span class="app">Android</span>
+                                    <img src="../images/icon/icon_qr.png" alt="QR코드"/>
+                                </div>
+                                <div class="flexColumnCenter">
+                                    <span class="app">IOS</span>
+                                    <img src="../images/icon/icon_qr.png" alt="QR코드"/>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="button" class="btn_bg_blue" onclick="popupClose();">닫기</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- popup-미리보기 -->
+            <div class="sample_page2">
+                <div class="sample_bg">
+                    <button type="button" class="btn_out">미리 보기 종료</button>
+                    <button type="button" class="btn_capture">캡쳐</button>
+                </div>
+            </div>
+
+            <!-- popup-어플리케이션 -->
+            <div class="cnt_popup4 bg_popup_dark">
+                <div class="wrap_100 flexCenterAll">
+                    <div class="popup_box popup_box2">
+                        <div class="popup_capture mb24">
+                            <div class="pad8_10">
+                                <img src="../images/etc/bg_my_gallery.png" alt="캡쳐화면"/>
+                            </div>
+                        </div>
+                        <strong class="mb12">수정된 이미지를 대표이미지로 설정하시겠습니까?</strong>
+                        <span class="mb24">*대표이미지는 프로필 > 내 갤러리 페이지에서 변경하실 수 있습니다.</span>
+                        <div class="btns_capture">
+                            <button type="button" class="btn_bg_grey2" onclick="popupClose();">다시 촬영</button>
+                            <button type="button" class="btn_bg_blue" onclick="popupClose();">설정</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </body>
+</html>

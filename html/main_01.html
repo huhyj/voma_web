@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>VOMA</title>
+    
+        <!-- Jquery -->
+        <script src="../js/jquery-3.4.1.min.js"></script>
+        <script src="../js/common.js"></script>
+
+        <!-- CSS -->
+        <link href="../css/main.css" rel="stylesheet">
+        <link href="../css/button.css" rel="stylesheet">
+        <link href="../css/font.css" rel="stylesheet">
+        <link href="../css/common.css" rel="stylesheet">
+        <link href="../css/reset.css" rel="stylesheet">
+	</head>
+
+	<body>
+        <!-- search -->
+        <div class="wrapper">
+
+            <!-- header -->
+            <header class="header">
+                <div class="gnb_box">
+
+                    <!-- logo -->
+                    <div class="header_1">
+                        <button type="button" class="btn_logo">로고</button>
+                    </div>
+
+                    <!-- tab -->
+                    <div class="header_2">
+                        <ul>
+                            <li class="on" onclick="location.href='./main_01.html'">1. 전시정보 입력</li>
+                            <li onclick="location.href='./main_02.html'">2. 템플릿 설정</li>
+                            <li onclick="location.href='./main_03.html'">3. 갤러리 디자인</li>
+                            <li onclick="location.href='./main_04.html'">4. 작품 전시</li>
+                            <li onclick="location.href='./main_05.html'">5. 투어 설정</li>
+                        </ul>
+                    </div>
+
+                    <!-- gnb -->
+                    <div class="header_3">
+                        <div class="">
+                            <!-- <button type="button" class="btn_gnb btn_gnb1">
+                                <span></span>
+                            </button>
+                            <button type="button" class="btn_gnb btn_gnb2"></button> -->
+                            <button type="button" class="btn_gnb btn_gnb3"></button>
+                            <button type="button" class="btn_gnb btn_gnb4"></button>
+                        </div>
+                    </div>
+
+                    <!-- profile -->
+                    <div class="header_4">
+                        <ul>
+                            <li>
+                                <a href="javascript:;">
+                                    <div class="top_profile_img flexLineCenter">
+                                        <img src="../images/etc/profile.png" alt="프로필"/>
+                                        <div class="top_profile flexColumnSpace">
+                                            <p class="ellipsis">Kim Artvoma</p>
+                                            <p class="ellipsis mt5">#관람객 #컬렉터 #셀러</p>
+                                        </div>
+                                        <button type="button" class="btn_down btn_down_bk">열기</button>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+
+                        <!-- profile_click -->
+                        <div class="tooltip_wt tooltip_wt2">
+                            <div class="tooltip_box_wt">
+                                <ul class="tooltip_top">
+                                    <li onclick="location.href='./my_profile.html'">
+                                        <button type="button" class="btn_h_profile">My Profile</button>
+                                    </li>
+                                    <li onclick="location.href='./my_art.html'">
+                                        <button type="button" class="btn_h_art">My Art</button>
+                                    </li>
+                                    <li onclick="location.href='./my_gallery.html'">
+                                        <button type="button" class="btn_h_gallery">My Gallery</button>
+                                    </li>
+                                </ul>
+                                <ul class="tooltip_bottom">
+                                    <li>
+                                        <button type="button" class="btn_h_logout">로그아웃</button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- profile-nonLogin -->
+                    <div class="header_5">
+                        <button type="button" class="btn_login2" onclick="location.href='./login.html'">로그인</button>
+                    </div>
+
+                </div>
+            </header>
+
+            <!-- cnt_center -->
+            <section class="cnt_center cnt_center_01">
+                <div class="cnt_center_inner flexColumnCenter">
+                    <div class="cnt_center_top">
+                        <p class="mb40">전시정보</p>
+                        <div class="view_box">
+                            <label class="switch">
+                                <input type="checkbox" class="view_chk">
+                                <span class="slider"></span>
+                                <span class="slider_txt slider_left" style="left: 13px;">공개</span>
+                                <span class="slider_txt slider_right" style="right: 7px;">비공개</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="cnt_center_mid">
+                        <div class="info_wrap mb40">
+                            <label class="required mb12">전시명</label>
+                            <input type="text" placeholder="전시명을 입력해 주세요.">
+                        </div>
+                        <!-- <div class="info_wrap mb40">
+                            <label class="mb12">전시설명</label>
+                            <textarea placeholder="전시 설명을 입력해 주세요."></textarea>
+                        </div> -->
+                        <div class="info_wrap mb40">
+                            <label class="mb12">기간</label>
+                            <div class="info_date flexSpaceCenter">
+                                <input type="text" placeholder="연도-월-일" readonly>
+                                <span>~</span>
+                                <input type="text" placeholder="연도-월-일" readonly>
+                            </div>
+                        </div>
+                        <div class="info_wrap mb40">
+                            <label>카테고리</label>
+                            <div class="info_category">
+                                <button type="button">미술(평면)</button>
+                                <button type="button">조각</button>
+                                <button type="button">공예</button>
+                                <button type="button">사진</button>
+                                <button type="button">디자인/가구</button>
+                                <button type="button">팝아트/아트토이</button>
+                                <button type="button">미디어</button>
+                                <button type="button">기타(패션, 섬유 등)</button>
+                            </div>
+                        </div>
+                        <div class="info_wrap mb60">
+                            <label class="mb12">해시태그</label>
+                            <input type="text" placeholder="해시태그는 관람자가 검색 시 활용 됩니다.">
+                        </div>
+                    </div>
+
+                    <div class="cnt_center_bottom">
+                        <button type="button" class="btn_bg_bk" onclick="chkSpace();">다음</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- popup-미작성1 -->
+            <div class="cnt_popup bg_popup_dark">
+                <div class="wrap_100 flexCenterAll">
+                    <div class="popup_box">
+                        <p>전시명을 입력해 주세요.</p>
+                        <button type="button" class="btn_bg_blue" onclick="popupClose();">확인</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- popup-미작성2 -->
+            <div class="cnt_popup2 bg_popup_dark">
+                <div class="wrap_100 flexCenterAll">
+                    <div class="popup_box">
+                        <strong>미작성 내용이 있습니다.</strong>
+                        <strong>저장 후 미작성인 상태로 넘어가시겠습니까?</strong>
+                        <span>* 미작성한 항목은 프로필 > 내 갤러리에서 작성할 수 있습니다</span>
+                        <div class="flexCenterAll">
+                            <button type="button" class="btn_bg_grey" onclick="popupClose();">취소</button>
+                            <button type="button" class="btn_bg_blue" onclick="popupClose();">확인</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </body>
+</html>

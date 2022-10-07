@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>VOMA</title>
+    
+        <!-- Jquery -->
+        <script src="../js/jquery-3.4.1.min.js"></script>
+        <script src="../js/common.js"></script>
+
+        <!-- CSS -->
+        <link href="../css/main.css" rel="stylesheet">
+        <link href="../css/button.css" rel="stylesheet">
+        <link href="../css/font.css" rel="stylesheet">
+        <link href="../css/common.css" rel="stylesheet">
+        <link href="../css/reset.css" rel="stylesheet">
+	</head>
+
+	<body>
+        <!-- search -->
+        <div class="wrapper">
+
+            <!-- header -->
+            <header class="header">
+                <div class="gnb_box">
+
+                    <!-- logo -->
+                    <div class="header_1">
+                        <button type="button" class="btn_logo">로고</button>
+                    </div>
+
+                    <!-- tab -->
+                    <div class="header_2">
+                        <ul>
+                            <li onclick="location.href='./main_01.html'">1. 전시정보 입력</li>
+                            <li onclick="location.href='./main_02.html'">2. 템플릿 설정</li>
+                            <li class="on" onclick="location.href='./main_03.html'">3. 갤러리 디자인</li>
+                            <li onclick="location.href='./main_04.html'">4. 작품 전시</li>
+                            <li onclick="location.href='./main_05.html'">5. 투어 설정</li>
+                        </ul>
+                    </div>
+
+                    <!-- gnb -->
+                    <div class="header_3">
+                        <div class="flexSpaceCenter">
+                            <button type="button" class="btn_gnb btn_gnb1">
+                                <span></span>
+                            </button>
+                            <button type="button" class="btn_gnb btn_gnb2"></button>
+                            <button type="button" class="btn_gnb btn_gnb3"></button>
+                            <button type="button" class="btn_gnb btn_gnb4"></button>
+                        </div>
+
+                        <!-- tooltip_hover -->
+                        <div class="tooltip">
+                            <div class="tooltip_box">
+                                <span>템플릿 선택</span>
+                            </div>
+                        </div>
+
+                        <!-- tooltip_click -->
+                        <div class="tooltip_wt tooltip_wt1">
+                            <ul class="tooltip_box_wt">
+                                <li class="on">템플릿1</li>
+                                <li>템플릿2</li>
+                                <li>템플릿3</li>
+                                <li>템플릿4</li>
+                                <li>템플릿5</li>
+                                <li>템플릿6</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- profile -->
+                    <div class="header_4">
+                        <ul>
+                            <li>
+                                <a href="javascript:;">
+                                    <div class="top_profile_img flexLineCenter">
+                                        <img src="../images/etc/profile.png" alt="프로필"/>
+                                        <div class="top_profile flexColumnSpace">
+                                            <p class="ellipsis">Kim Artvoma</p>
+                                            <p class="ellipsis mt5">#관람객 #컬렉터 #셀러</p>
+                                        </div>
+                                        <button type="button" class="btn_down btn_down_bk">열기</button>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+
+                        <!-- profile_click -->
+                        <div class="tooltip_wt tooltip_wt2">
+                            <div class="tooltip_box_wt">
+                                <ul class="tooltip_top">
+                                    <li onclick="location.href='./my_profile.html'">
+                                        <button type="button" class="btn_h_profile">My Profile</button>
+                                    </li>
+                                    <li onclick="location.href='./my_art.html'">
+                                        <button type="button" class="btn_h_art">My Art</button>
+                                    </li>
+                                    <li onclick="location.href='./my_gallery.html'">
+                                        <button type="button" class="btn_h_gallery">My Gallery</button>
+                                    </li>
+                                </ul>
+                                <ul class="tooltip_bottom">
+                                    <li>
+                                        <button type="button" class="btn_h_logout">로그아웃</button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- profile-nonLogin -->
+                    <div class="header_5">
+                        <button type="button" class="btn_login2" onclick="location.href='./login.html'">로그인</button>
+                    </div>
+
+                </div>
+            </header>
+
+            <!-- content_left -->
+            <section class="cnt_left cnt_left_design">
+                <div class="view_box">
+                    <label class="switch">
+                        <input type="checkbox" class="view_chk">
+                        <span class="slider"></span>
+                        <span class="slider_txt slider_left">1인칭</span>
+                        <span class="slider_txt slider_right">자유</span>
+                    </label>
+                </div>
+
+                <div class="snb_box">
+                    <div class="flexColumnCenter">
+                        <button type="button" class="btn_snb btn_snb1" onclick="popupManual();"><span>조작법</span></button>
+                        <button type="button" class="btn_snb btn_snb2" style="display: none;"><span>삭제</span></button>
+                        <button type="button" class="btn_snb btn_snb3"><span>실행취소</span></button>
+                        <button type="button" class="btn_snb btn_snb4"><span>복원</span></button>
+                        <button type="button" class="btn_snb btn_snb5"><span>단계 초기화</span></button>
+                        <button type="button" class="btn_snb btn_snb6 on"><span>미니맵</span></button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- content_right -->
+            <section class="cnt_right">
+                <div class="cnt_right_top">
+                    <div class="container2">
+                        <div class="cnt_right_tit">
+                            <div class="flexSpaceCenter">
+                                <span>COLOR</span>
+                                <button type="button" class="btn_border_14">효과제거</button>
+                            </div>
+                            <div class="mb40 mt12">
+                                팔레트 내용
+                            </div>
+                        </div>
+
+                        <div class="cnt_right_tit">
+                            <div class="flexSpaceCenter">
+                                <span>TEXTURE</span>
+                                <button type="button" class="btn_border_14">효과제거</button>
+                            </div>
+                            <div class="mb40 mt12">
+                                텍스처 내용
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cnt_right_bottom">
+                    <div class="wrap_100 flexLineCenter">
+                        <button type="button" class="bg_grey">이전</button>
+                        <button type="button" class="bg_bk">다음</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- key manual -->
+            <div class="cnt_manual bg_popup_dark">
+                <div class="wrap_100 flexCenterAll">
+                    <div class="manual_box">
+                        <div class="popup_tit">
+                            <p>조작법</p>
+                            <button type="button" class="btn_close_wt" onclick="popupClose();"></button>
+                        </div>
+                        <div class="flexLineCenter pt80">
+                            <ul class="manual_ul">
+                                <li>
+                                    <img src="../images/icon/manual_1.svg" alt="시점 변경, 회전"/>
+                                    <span>시점 <strong>변경, 회전</strong></span>
+                                </li>
+                                <li>
+                                    <img src="../images/icon/manual_2.svg" alt="정면, 후면 빠른 이동"/>
+                                    <span>정면, 후면 <strong>빠른 이동</strong></span>
+                                </li>
+                                <li>
+                                    <img src="../images/icon/manual_3.svg" alt="좌우, 앞뒤 이동"/>
+                                    <span>좌우, 앞뒤 <strong>이동</strong></span>
+                                </li>
+                            </ul>
+                            <ul class="manual_ul pl60">
+                                <li>
+                                    <img src="../images/icon/manual_4.svg" alt="이동"/>
+                                    <span><strong>이동</strong></span>
+                                </li>
+                                <li>
+                                    <img src="../images/icon/manual_5.svg" alt="삭제"/>
+                                    <span><strong>삭제</strong></span>
+                                </li>
+                                <li>
+                                    <img src="../images/icon/manual_6.svg" alt="ctrl"/>
+                                    <img src="../images/icon/manual_7.svg" alt="+"/>
+                                    <img src="../images/icon/manual_8.svg" alt="z"/>
+                                    <span><strong>실행취소</strong></span>
+                                </li>
+                                <li>
+                                    <img src="../images/icon/manual_6.svg" alt="ctrl"/>
+                                    <img src="../images/icon/manual_7.svg" alt="+"/>
+                                    <img src="../images/icon/manual_9.svg" alt="y"/>
+                                    <span><strong>복구</strong></span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </body>
+</html>
